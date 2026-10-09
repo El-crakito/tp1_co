@@ -35,6 +35,9 @@ public class Humain {
 		this.argent+=a;
 	}
 	public void perdreArgent(int a) {
-		this.argent-=a;
+		if (this.argent<a) {
+			this.argent=0;
+		}
+		else {this.argent-=a;}
 	}
 }
