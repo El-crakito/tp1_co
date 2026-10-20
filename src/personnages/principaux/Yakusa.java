@@ -36,7 +36,7 @@ public class Yakusa extends Humain  {
 		//this.parler("Bonjour ! Je m'apelle "+ this.getNom() + " et j'aime boire du "+ this.getBoisson() + " ,  je posséde : "+this.geteputation() +" de réputation et appartient au clan : "+this.getClan());
 		super.direBonjour() ; 
 		//this.parler(" ,je posséde : "+this.geteputation() +" de réputation et appartient au clan : "+this.getClan());
-		this.parler(" Mon clan est celui de"+ this.clan); 
+		this.parler(" Mon clan est celui de "+ this.clan); 
 
 	}
 }
