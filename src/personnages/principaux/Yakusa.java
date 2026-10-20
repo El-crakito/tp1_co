@@ -15,9 +15,10 @@ public class Yakusa extends Humain  {
 	public String getClan() {return this.clan;}
 	public  int geteputation() {return this.reputation;}
 	
-	public void extorquerc(Commercant c ) {
+	public void extorquer(Commercant c ) {
 		int d = c.seFaireExtorquer();
 		this.gagnerArgent(d);
+		this.parler("J’ai piqué le fric de "+ c.getNom());
 	}
 	public void gagnerDuel() {
 		this.reputation+=1;
@@ -27,13 +28,15 @@ public class Yakusa extends Humain  {
 	public int perdreDuel() {
 		int e = this.getArgent();
 		this.reputation=-1;
-		this.parler("j'ai ptet perdu mais prochaine 1vs1 octogone gare du nord à main nu ");
+		this.parler("j'ai ptet perdu mes " +this.getArgent()+" mais prochaine 1vs1 octogone gare du nord à main nu ");
 		this.perdreArgent(e);
 		return e ;
 	}
 	public void direBonjour() {
-		this.parler("Bonjour ! Je m'apelle "+ this.getNom() + " et j'aime boire du "+ this.getBoisson() + " ,  je posséde : "+this.geteputation() +" de réputation et appartient au clan : "+this.getClan());
-		//super.direBonjour()
+		//this.parler("Bonjour ! Je m'apelle "+ this.getNom() + " et j'aime boire du "+ this.getBoisson() + " ,  je posséde : "+this.geteputation() +" de réputation et appartient au clan : "+this.getClan());
+		super.direBonjour() ; 
 		//this.parler(" ,je posséde : "+this.geteputation() +" de réputation et appartient au clan : "+this.getClan());
+		this.parler(" Mon clan est celui de"+ this.clan); 
+
 	}
 }

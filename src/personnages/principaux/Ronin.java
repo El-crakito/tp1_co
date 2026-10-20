@@ -17,13 +17,16 @@ public class Ronin extends Humain {
 		else {
 			this.perdreArgent(f);
 			c.gagnerArgent(f);
+			this.parler("tient " + c.getNom()+" voilà"+f + " sous."); 
 		}
 	}
+	
 	public void provoquer(Yakusa y ) {
 		if(this.honneur*2>y.geteputation()) {
 			this.honneur+=1;
-			this.parler("c'est chaud comment t'es faible , va boire du bon bissap et revient me voir ");
+			
 			int g = y.perdreDuel();
+			this.parler("c'est chaud comment t'es faible , va boire du bon bissap et revient me voir petit ronin  ");
 			this.gagnerArgent(g);
 		}
 		else if (this.honneur*2<y.geteputation()) {

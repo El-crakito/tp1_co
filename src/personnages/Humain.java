@@ -14,10 +14,11 @@ public class Humain {
 	
 	public void parler(String texte) {
 		System.out.println(this.nom +" - " + texte);
+		System.out.println();
 		
 	}
 	public void direBonjour() {
-		this.parler("Bonjour ! Je m'apelle "+ this.nom + " et j'aime boire du "+ this.boisson);
+		this.parler("Bonjour ! Je m'apelle "+ this.nom + " et j'aime boire du "+ this.boisson + "et j’ai "+ this.argent +" sous en poche.");
 	}
 	public void boire() {
 		this.parler("Mhhhh , un bon verre de " + this.boisson + "! GLOUPS ! ");
